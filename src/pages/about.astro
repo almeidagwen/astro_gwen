@@ -1,11 +1,13 @@
 ---
-import '../styles/global.css';
+	import '../styles/global.css';
+	import Footer from '../components/Footer.astro';
+	import Header from '../components/Header.astro';
 
 const pageTitle = "About Me";
 
 const identity = {
   firstName: "Gwen",
-  country: "United States",
+  country: "the United States",
   occupation: "Graphic Design Student",
   hobbies: ["baking", "photography", "hiking"],
 };
@@ -38,12 +40,8 @@ const skillColor = "navy";
 	</head>
 
 	<body>
-  <a href="/">Home</a>
-  <a href="/about/">About</a>
-  <a href="/blog/">Blog</a>
-  <Navigation />
 
-
+  <Header />
   <h1>{pageTitle}</h1>
   <h2>... and my new Astro site!</h2>
 
@@ -71,6 +69,9 @@ const skillColor = "navy";
 {finished && <p>I finished this tutorial!</p>}
 
 {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
-
+  <Footer/>
+      <script>
+      import "../scripts/menu.js";
+      </script>
 	</body>
 </html>
